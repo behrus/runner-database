@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h4>{{ name }} Daten</h4>
+    {% for data in runner %}
+        <dl id={{ data.id }}>
+            <dt>Laufzeit</dt>
+            {% if data.running_time is empty %}
+                <dd>Nicht übermittelt</dd>
+                <dt>Distanz</dt>
+                <dd> - </dd>
+            {% else %}
+                <dd>{{ data.running_time|trim|date('H:i') }}</dd>
+                <dt>Distanz</dt>
+                <dd>{{ data.distance }} {{ data.distance_unit }}</dd>
+            {% endif %}
+            <dt>Letztes Training</dt>
+            <dd>{{ data.last_training is empty ? 'Nicht übermittelt' :  data.last_training|trim|date('d.m.Y H:i') }}</dd>
+        </dl>
+    {% endfor %}
+{% endblock %}

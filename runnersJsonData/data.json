@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "Lisa Klaus",
+    "running_time": "01:05",
+    "distance": "5",
+    "distance_unit": "km",
+    "last_training": "1713514238"
+  },
+  {
+    "id": "2",
+    "name": "Lars Tender",
+    "running_time": "01:55",
+    "distance": "7",
+    "distance_unit": "km",
+    "last_training": "1713431438"
+  },
+  {
+    "id": "3",
+    "name": "Mike Huhn",
+    "running_time": "01:17",
+    "distance": "5",
+    "distance_unit": "km",
+    "last_training": "1713456638"
+  },
+  {
+    "id": "4",
+    "name": "Candy Neuer",
+    "running_time": "01:35",
+    "distance": "5",
+    "distance_unit": "km",
+    "last_training": "1712070638"
+  },
+  {
+    "id": "1",
+    "name": "Lisa Klaus",
+    "running_time": "01:46",
+    "distance": "6",
+    "distance_unit": "km",
+    "last_training": "1712315438"
+  },
+  {
+    "id": "3",
+    "name": "Mike Huhn",
+    "running_time": "00:03",
+    "distance": "100",
+    "distance_unit": "m",
+    "last_training": "1712927438"
+  },
+  {
+    "id": "4",
+    "name": "Candy Neuer",
+    "running_time": "01:33",
+    "distance": "6",
+    "distance_unit": "km",
+    "last_training": "1712401838"
+  },
+  {
+    "id": "1",
+    "name": "Lisa Klaus",
+    "running_time": "02:10",
+    "distance": "7",
+    "distance_unit": "km",
+    "last_training": "1712859038"
+  },
+  {
+    "id": "2",
+    "name": "Lars Tender",
+    "running_time": "00:10",
+    "distance": "600",
+    "distance_unit": "m",
+    "last_training": "1712232638"
+  }
+]
