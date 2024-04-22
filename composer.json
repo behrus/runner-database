@@ -17,9 +17,6 @@
         "symfony/webpack-encore-bundle": "^1.17",
         "symfony/yaml": "4.4.*"
     },
-    "require-dev": {
-        "symfony/maker-bundle": "^1.39"
-    },
     "config": {
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
