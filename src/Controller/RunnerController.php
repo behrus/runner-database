@@ -22,11 +22,9 @@ class RunnerController extends AbstractController
     public function index(): Response
     {
 
-        $data = $this->runnerService->getRunnersData();
-
         return $this->render(
             'runner/index.html.twig', [
-                'runners' => $data
+                'runners' => $this->runnerService->getRunnersData()
             ]
         );
     }

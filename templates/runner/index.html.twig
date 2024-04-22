@@ -1,35 +1,31 @@
-{% extends 'layout.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block content %}
-    <h4>Aktuelle Daten</h4>
-    <table class="table table-striped">
+
+     <h5 class="mb-0 text-white lh-50">Aktuelle Daten</h5>
+
+     <table class="table table-striped">
         <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Laufzeit</th>
-            <th scope="col">Distanz</th>
-            <th scope="col">Letztes Training</th>
-        </tr>
-        {#  <tr>
-            <th scope="col"></th>
-            <th scope="col"><input type="text" data-table-filter></th>
-            <th scope="col"><input type="text" data-table-filter></th>
-            <th scope="col"><input type="text" data-table-filter></th>
-        </tr>#}
-        </thead>
-        {% for runner in runners %}
             <tr>
-                <td>
-                    <a href="{{ path('runner', {id: runner.id}) }}">{{ runner.name }}</a>
-                </td>
-                {% if runner.running_time is empty %}
-                    <td>Nicht übermittelt</td>
-                {% else %}
-                    <td>{{runner.running_time|trim|date('H:i') }}</td>
-                    <td>{{ runner.distance }} {{ runner.distance_unit }}</td>
-                {% endif %}
-                <td>{{ runner.last_training is empty ? 'Nicht übermittelt' :  runner.last_training|trim|date('d.m.Y H:i') }}</td>
+                <th scope="col">Name</th>
+                <th scope="col">Laufzeit</th>
+                <th scope="col">Distanz</th>
+                <th scope="col">Letztes Training</th>
             </tr>
+            </thead>
+            {% for runner in runners %}
+                <tr>
+                    <td>
+                        <a href="{{ path('runner', {id: runner.id}) }}">{{ runner.name }}</a>
+                    </td>
+                    {% if runner.running_time is empty %}
+                        <td>Nicht übermittelt</td>
+                    {% else %}
+                        <td>{{runner.running_time|trim|date('H:i') }}</td>
+                        <td>{{ runner.distance }} {{ runner.distance_unit }}</td>
+                    {% endif %}
+                    <td>{{ runner.last_training is empty ? 'Nicht übermittelt' :  runner.last_training|trim|date('d.m.Y H:i') }}</td>
+                </tr>
         {% endfor %}
     </table>
 {% endblock %}

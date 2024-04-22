@@ -2,8 +2,6 @@
 
 namespace App\Service;
 
-
-use App\Entity\RunnerModel;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
@@ -15,6 +13,7 @@ class RunnerService
 {
     /** @var ObjectNormalizer $normalizer */
     private ObjectNormalizer $normalizer;
+
     private string $rootPath;
 
     public function __construct(string $rootPath)
@@ -53,9 +52,9 @@ class RunnerService
     {
         $data = json_decode($this->getJsonData(), true);
 
-        return array_filter($data, function ($var) use ($id) {
+        return array_values(array_filter($data, function ($var) use ($id) {
             return ($var['id'] == $id);
-        });
+        }));
     }
 
     private function getNormalizer(): Serializer
