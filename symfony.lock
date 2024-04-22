@@ -80,18 +80,6 @@
             "config/routes.yaml"
         ]
     },
-    "symfony/security-bundle": {
-        "version": "4.4",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "4.4",
-            "ref": "7b4408dc203049666fe23fabed23cbadc6d8440f"
-        },
-        "files": [
-            "config/packages/security.yaml"
-        ]
-    },
     "symfony/twig-bundle": {
         "version": "4.4",
         "recipe": {
@@ -124,8 +112,5 @@
             "package.json",
             "webpack.config.js"
         ]
-    },
-    "twig/extra-bundle": {
-        "version": "v3.7.0"
     }
 }
